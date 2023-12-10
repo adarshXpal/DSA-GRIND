@@ -7,6 +7,8 @@ void explainset(){
 	st.emplace(23);
 	st.emplace(44);
 	st.emplace(44);
+	st.emplace(33);
+
 	for(auto& str : st){
 		cout<<str<<" ";
 	}
@@ -16,9 +18,12 @@ void explainset(){
 	int cnt = st.count(44);
 	cout<<cnt<<" :: If 1 then there is occurence if 0 then there is no occurence"<<endl;
 	auto iter = st.find(13);
-	st.erase(iter,it);
+	st.erase(iter,++it);
 	cout<<*(st.begin());
-
+	cout<<"the set as whole"<<endl;
+	for(auto& iter: st){
+		cout<<iter<<" ";
+	}
 }
 int main(){
 	explainset();

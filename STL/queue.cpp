@@ -6,7 +6,7 @@ void explainqueue(){
 	qu.push(1);
 	qu.emplace(2);
 	qu.emplace(3);
-	qu.back()=3;
+	qu.back()=33;
 	cout<<"The size of the queue is : "<<qu.size()<<endl;
 	cout<<qu.front()<<" is in the front"<<endl;
 	cout<<qu.back()<<" is in the back of the queue"<<endl;
