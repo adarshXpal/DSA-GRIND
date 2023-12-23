@@ -14,8 +14,10 @@ void explainset(){
 	}
 	cout<<endl;
 	auto it = st.find(23);
+	cout<<"The address of 23 in set is :"<<&it<<endl;
 	/* st.erase(23); */
 	int cnt = st.count(44);
+	cout<<"The repitition of 44 is: "<<cnt<<endl;
 	cout<<cnt<<" :: If 1 then there is occurence if 0 then there is no occurence"<<endl;
 	auto iter = st.find(13);
 	st.erase(iter,++it);
