@@ -15,6 +15,7 @@ void explainList(){
 	}
 	/* rest fuctions are same as vector. */
 	/* begin,end,rbegin,rend,insert,clear,insert,size,swap. */
+	cout<<"For Example : "<<endl;
 }
 int main(){
 	explainList();
