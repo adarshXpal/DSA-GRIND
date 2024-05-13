@@ -1,4 +1,6 @@
 #include<bits/stdc++.h>
+#include <sstream>
+#include <string>
 #include <utility>
 using namespace std;
 
@@ -12,6 +14,16 @@ int main(){
 	pair<int,char> p1={1,'z'};
 	cout<<"the size of p is :: "<<endl;
 	cout<<sizeof(p1)<<endl;
+	int n;
+	cin>>n;
+	pair<int,string> array[n];
+	for(int i=0;i<n;i++){
+		cin>>array[i].first>>array[i].second;
+	}
+	cout<<"We are Displaying the Array:: "<<endl;
+	for(int j=0;j<n;j++){
+		cout<<array[j].first<<" * "<<array[j].second<<endl;
+	}
 return 0;
 
 }
