@@ -12,7 +12,7 @@ public:
   ~Node() {
     int value = this->data;
     this->next = NULL;
-    cout << "The node is erased with data: " << value << endl;
+    cout << "The node is deleted with Data: " << value << endl;
   }
 };
 void insertAtHead(Node *&head, int d) {
@@ -65,7 +65,7 @@ void deleteNode(Node *&head, Node *&tail, int Position) {
     while (cnt < Position) {
       prev = curr;
       curr = curr->next;
-      ++cnt;
+      cnt++;
     }
     if (curr->next == NULL) {
       tail = prev;
@@ -74,6 +74,7 @@ void deleteNode(Node *&head, Node *&tail, int Position) {
     delete curr;
   }
 }
+
 int main() {
   Node *node1 = new Node(1);
   Node *head = node1;
@@ -83,11 +84,12 @@ int main() {
   print(head);
   insertAtHead(head, 0);
   print(head);
-  insertAtPosition(head, tail, 2, 0);
+  insertAtPosition(head, tail, 2, -1);
   print(head);
-  deleteNode(head, tail, 4);
+  deleteNode(head, tail, 3);
   print(head);
-  insertAtPosition(head, tail, 2, 10);
-  print(head);
+  cout << "Head is at: " << head->data << endl;
+  cout << "Tail is at: " << tail->data << endl;
+
   return 0;
 }
