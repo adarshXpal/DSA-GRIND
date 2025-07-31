@@ -14,6 +14,15 @@ public:
   }
 };
 
+void printInorder(Node *root) {
+  if (root == NULL) {
+    return;
+  }
+  printInorder(root->left);
+  cout << root->data << " ";
+  printInorder(root->right);
+}
+
 Node *insertIntoBST(Node *root, int data) {
   if (root == NULL) {
     root = new Node(data);
@@ -130,8 +139,11 @@ int main() {
   cout << "Result Node is: " << result->data << endl;
   cout << "minElement in BST is: " << minElement(root) << endl;
   cout << "maxElement in BST is: " << maxElement(root) << endl;
-  int val = 3;
+  int val = 8;
   cout << "Deleted BST node deleted is: " << val << endl;
   levelOrderTraversal(deleteNode(root, val));
+  cout << "Printing Inorder of BST: " << endl;
+  printInorder(root);
+  cout << endl;
   return 0;
 }
