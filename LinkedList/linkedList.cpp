@@ -12,8 +12,8 @@ public:
   ~Node() {
     int value = this->data;
     if (this->next != NULL) {
-      delete next;
       this->next = NULL;
+      delete next;
     }
     cout << "Memory is free for node with data: " << value << endl;
   }
